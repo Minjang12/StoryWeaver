@@ -1,0 +1,107 @@
+:root {
+    --primary-bg: #f7f8fa;
+    --secondary-bg: #ffffff;
+    --sidebar-bg: #ffffff;
+    --text-color: #2c3e50;
+    --text-color-muted: #8ca1b5;
+    --header-bg: #ffffff;
+    --border-color: #e0e6ed;
+    --accent-color: #4a90e2;
+    --accent-color-rgb: 74, 144, 226;
+    --accent-color-dark: #3a7ac8;
+    --danger-color: #e74c3c;
+    --danger-color-rgb: 231, 76, 60;
+    --success-color: #2ecc71;
+    --storyline-color: #2F855A;
+    --storyline-highlight-color: #D81B60;
+    --node-bg-default: #ffffff;
+    --node-border: #d1d8e0;
+    --node-selected-border: #4a90e2;
+
+    --border-radius: 6px;
+    --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    --transition-speed: 0.2s;
+}
+
+body.dark-theme {
+    --primary-bg: #1f2328;
+    --secondary-bg: #282c34;
+    --sidebar-bg: #282c34;
+    --text-color: #d1d5db;
+    --text-color-muted: #828d99;
+    --header-bg: #282c34;
+    --border-color: #3a4048;
+    --accent-color: #58a6ff;
+    --accent-color-rgb: 88, 166, 255;
+    --accent-color-dark: #388bfd;
+    --danger-color: #f85149;
+    --danger-color-rgb: 248, 81, 73;
+    --success-color: #34d399;
+    --storyline-color: #34d399;
+    --storyline-highlight-color: #f472b6;
+    --node-bg-default: #2c313a;
+    --node-border: #4b5263;
+    --node-selected-border: #58a6ff;
+}
+
+html, body {
+	position: relative;
+	width: 100%;
+	height: 100%;
+    overflow: hidden;
+}
+
+body {
+	color: var(--text-color);
+	background-color: var(--primary-bg);
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* Add a subtle scrollbar style */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+::-webkit-scrollbar-thumb {
+    background: var(--border-color);
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--text-color-muted);
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 16px; /* Ensure readability on mobile */
+    }
+
+    /* Make tap targets larger */
+    button,
+    input,
+    select,
+    textarea {
+        min-height: 44px;
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .icon-btn {
+        width: 44px !important;
+        height: 44px !important;
+    }
+
+    /* Slimmer scrollbars for mobile */
+    ::-webkit-scrollbar {
+        width: 5px;
+        height: 5px;
+    }
+}
+

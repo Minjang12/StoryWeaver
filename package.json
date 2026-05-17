@@ -1,0 +1,44 @@
+{
+  "name": "storyweaver",
+  "version": "1.0.0",
+  "description": "A visual storytelling tool for writers and narrative designers.",
+  "main": "electron.js",
+  "scripts": {
+    "build": "rollup -c",
+    "dev": "rollup -c -w",
+    "start": "sirv public --no-clear",
+    "electron:dev": "npm run build && node node_modules/electron/cli.js electron.js",
+    "electron:build": "npm run build && electron-builder"
+  },
+  "build": {
+    "productName": "StoryWeaver",
+    "appId": "com.storyweaver.app",
+    "files": [
+      "public/**/*",
+      "electron.js",
+      "src/preload.js"
+    ],
+    "directories": {
+      "output": "dist"
+    },
+    "win": {
+      "icon": "build/icon.ico"
+    }
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^17.0.0",
+    "@rollup/plugin-node-resolve": "^11.0.0",
+    "electron": "^38.2.0",
+    "electron-builder": "^26.0.12",
+    "rollup": "^2.3.4",
+    "rollup-plugin-css-only": "^3.1.0",
+    "rollup-plugin-livereload": "^2.0.0",
+    "rollup-plugin-svelte": "^7.0.0",
+    "rollup-plugin-terser": "^7.0.0",
+    "svelte": "^3.0.0"
+  },
+  "dependencies": {
+    "sirv-cli": "^1.0.0",
+    "uuid": "^13.0.0"
+  }
+}
